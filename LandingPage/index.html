@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint ÉDÉN - Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay playinline muted loop>
+            <source src="assets/background.mp4" type="video/mp4" />
+        </video>
+        <div class="wrapper">
+            <div class="copy">
+                <p>Berlin 0910, <br> PARIS 17895</p>
+                <p>An Origin From the Garden Of Life</p>
+                <p>Enter <br> terminal&reg;</p>
+                <p></p>
+            </div>
+        </div>
+        <div class="blocks">
+            <div class="block block-left"></div>
+            <div class="block block-right"></div>
+        </div>
+        <div class="letters">
+            <div class="row">
+                <div class="letter top-left">S</div>
+                <div class="letter top-right">É</div>
+            </div>
+            <div class="Row">
+                <div class="letter bottom-right">0</div>
+                <div class="letter bottom-left">3</div>
+            </div>
+        </div>
+        <script>
+
+            gsap.from(".letter", 0.8, {
+                y: -20,
+                opacity: 0,
+                ease: "power3.inOut",
+                stagger: 0.1,
+            });
+
+            gsap.to(".top-left, .top-right", 2, {
+                top: "0",
+                ease: "power3.inOut",
+                delay: 2,
+            });
+
+            gsap.to(".bottom-right", 2, {
+                bottom: "0",
+                ease: "power3.inOut",
+                delay: 2,
+            });
+
+            gsap.to(".top-left", 2, {
+                left: "0",
+                ease: "power3.inOut",
+                delay: 4,
+            });
+
+            gsap.to(".top-right", 2, {
+                right: "0",
+                ease: "power3.inOut",
+                delay: 4,
+            });
+
+            gsap.to(".bottom-right", 2, {
+                right: "0",
+                ease: "power3.inOut",
+                delay: 4,
+            });
+
+            gsap.to(".block-left", 2, {
+                left: "-50%",
+                ease: "power3.inOut",
+                delay: 4,
+            });
+
+            gsap.to(".block-right", 2, {
+                right: "-50%",
+                ease: "power3.inOut",
+                delay: 4,
+            });
+        </script>
+</body>
+
+</html>
